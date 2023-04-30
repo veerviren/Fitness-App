@@ -13,6 +13,12 @@
         android:theme="@style/Theme.FitnessApp"
         tools:targetApi="31">
         <activity
+            android:name=".NutritionActivityExpanded"
+            android:exported="false" />
+        <activity
+            android:name=".NutritionActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

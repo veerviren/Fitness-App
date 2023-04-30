@@ -15,7 +15,7 @@
         android:padding="8dp"/>
 
     <ImageView
-        android:id="@+id/netrution"
+        android:id="@+id/nutrition"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/nutrition"

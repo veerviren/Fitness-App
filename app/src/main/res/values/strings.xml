@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Fitness app</string>
+    <string name="nutrition_description">The nutrition page is designed to help users achieve their dietary goals. It offers personalized meal plans, recipes, and nutrition information. Users can track their food intake and receive recommendations based on their preferences and needs.</string>
 </resources>

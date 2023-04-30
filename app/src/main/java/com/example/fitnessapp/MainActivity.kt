@@ -1,6 +1,8 @@
 package com.example.fitnessapp
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -38,7 +40,6 @@ class MainActivity : AppCompatActivity() {
             )
         )
 
-
         val exerciseAdapter = ExerciseAdapter(exercises)
         val exerciseRecyclerView: RecyclerView = findViewById(R.id.exercise_recycler_view)
         exerciseRecyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
@@ -75,6 +76,19 @@ class MainActivity : AppCompatActivity() {
         val popularWorkoutPlanRecyclerView: RecyclerView = findViewById(R.id.popular_workout_recycler_view)
         popularWorkoutPlanRecyclerView.layoutManager = LinearLayoutManager(this)
         popularWorkoutPlanRecyclerView.adapter = popularWorkoutPlanAdapter
+
+        //Footer logic
+        val homeImageView : ImageView = findViewById(R.id.home)
+        homeImageView.setOnClickListener {
+            Toast.makeText(this, "You are already on the home page", Toast.LENGTH_SHORT).show()
+        }
+
+        val nutritionImageView: ImageView = findViewById(R.id.nutrition)
+        nutritionImageView.setOnClickListener {
+            val intent = Intent(this, NutritionActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 }
 
