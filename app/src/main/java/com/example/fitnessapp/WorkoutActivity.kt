@@ -5,6 +5,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.CountDownTimer
+import android.view.View
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
@@ -30,7 +31,7 @@ class WorkoutActivity : AppCompatActivity() {
 
     private var timeLeftInMillis: Long = 60000 // 60 seconds
 
-    @SuppressLint("MissingInflatedId")
+    @SuppressLint("MissingInflatedId", "ResourceAsColor")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_workout)
@@ -108,6 +109,8 @@ class WorkoutActivity : AppCompatActivity() {
         val workoutImageView: ImageView = findViewById(R.id.random_workouts)
         val nutritionImageView: ImageView = findViewById(R.id.nutrition)
         val profileImageView: ImageView = findViewById(R.id.profile)
+
+        workoutImageView.setBackgroundColor(R.color.purple2)
 
         homeImageView.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)

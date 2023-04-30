@@ -1,5 +1,6 @@
 package com.example.fitnessapp
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -9,6 +10,7 @@ import android.widget.Toast
 import androidx.cardview.widget.CardView
 
 class NutritionActivity : AppCompatActivity() {
+    @SuppressLint("ResourceAsColor")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_nutrition)
@@ -54,6 +56,9 @@ class NutritionActivity : AppCompatActivity() {
         val nutritionImageView: ImageView = findViewById(R.id.nutrition)
         val profileImageView: ImageView = findViewById(R.id.profile)
 
+
+        nutritionImageView.setBackgroundColor(R.color.purple2)
+
         homeImageView.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
@@ -68,5 +73,9 @@ class NutritionActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        profileImageView.setOnClickListener {
+            val intent = Intent(this, ProfileActivity::class.java)
+            startActivity(intent)
+        }
     }
 }

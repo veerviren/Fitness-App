@@ -1,7 +1,9 @@
 package com.example.fitnessapp
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -9,6 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
 class MainActivity : AppCompatActivity() {
+    @SuppressLint("ResourceAsColor")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -77,11 +80,15 @@ class MainActivity : AppCompatActivity() {
         popularWorkoutPlanRecyclerView.layoutManager = LinearLayoutManager(this)
         popularWorkoutPlanRecyclerView.adapter = popularWorkoutPlanAdapter
 
+
+
         //Footer logic
         val homeImageView : ImageView = findViewById(R.id.home)
         homeImageView.setOnClickListener {
             Toast.makeText(this, "You are already on the home page", Toast.LENGTH_SHORT).show()
         }
+
+        homeImageView.setBackgroundColor(R.color.purple2)
 
         val nutritionImageView: ImageView = findViewById(R.id.nutrition)
         nutritionImageView.setOnClickListener {
@@ -95,6 +102,11 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        val profileImageView: ImageView = findViewById(R.id.profile)
+        profileImageView.setOnClickListener {
+            val intent = Intent(this, ProfileActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
 
