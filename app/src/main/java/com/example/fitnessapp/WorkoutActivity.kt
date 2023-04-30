@@ -28,7 +28,7 @@ class WorkoutActivity : AppCompatActivity() {
         Exercise("Lunge", R.drawable.excercise3)
     )
 
-    private var timeLeftInMillis: Long = 30000 // 30 seconds
+    private var timeLeftInMillis: Long = 60000 // 60 seconds
 
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -89,7 +89,7 @@ class WorkoutActivity : AppCompatActivity() {
                         if (currentExerciseIndex < exerciseList.size - 1) {
                             currentExerciseIndex++
                             setExercise(exerciseList[currentExerciseIndex])
-                            timeLeftInMillis = 30000
+                            timeLeftInMillis = 60000
                             updateTimer()
                         } else {
                             // Workout finished
@@ -122,12 +122,18 @@ class WorkoutActivity : AppCompatActivity() {
         workoutImageView.setOnClickListener {
             Toast.makeText(this, "You are already on the Workout page", Toast.LENGTH_SHORT).show()
         }
+
+        profileImageView.setOnClickListener {
+            val intent = Intent(this, ProfileActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun setExercise(exercise: Exercise) {
         exerciseImageView.setImageResource(exercise.imageResource)
         exerciseNameTextView.text = exercise.name
-        timeLeftInMillis = 30000 // 30 seconds
+        timeLeftInMillis = 60000 // 60 seconds
+        countDownTimer?.cancel()
         updateTimer()
     }
 
