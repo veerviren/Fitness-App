@@ -17,6 +17,9 @@ class WorkoutActivity : AppCompatActivity() {
     private lateinit var nextButton: Button
     private lateinit var timerTextView: TextView
     private lateinit var exerciseNameTextView: TextView
+    private lateinit var startStopButton: Button
+    private var isTimerRunning = false
+    private var countDownTimer: CountDownTimer? = null
 
     private var currentExerciseIndex = 0
     private val exerciseList = listOf(
@@ -25,7 +28,6 @@ class WorkoutActivity : AppCompatActivity() {
         Exercise("Lunge", R.drawable.excercise3)
     )
 
-    private lateinit var timer: CountDownTimer
     private var timeLeftInMillis: Long = 30000 // 30 seconds
 
     @SuppressLint("MissingInflatedId")
@@ -36,8 +38,10 @@ class WorkoutActivity : AppCompatActivity() {
         exerciseImageView = findViewById(R.id.workout_gif)
         previousButton = findViewById(R.id.workout_previous)
         nextButton = findViewById(R.id.workout_next)
+        startStopButton = findViewById(R.id.workout_start_stop)
         timerTextView = findViewById(R.id.workout_timer)
         exerciseNameTextView = findViewById(R.id.workout_title)
+
 
         // Set the first exercise as the current exercise
         setExercise(exerciseList[currentExerciseIndex])
@@ -47,6 +51,8 @@ class WorkoutActivity : AppCompatActivity() {
             if (currentExerciseIndex > 0) {
                 currentExerciseIndex--
                 setExercise(exerciseList[currentExerciseIndex])
+            }else{
+                Toast.makeText(this, "No previous exercise", Toast.LENGTH_SHORT).show()
             }
         }
 
@@ -56,23 +62,48 @@ class WorkoutActivity : AppCompatActivity() {
                 currentExerciseIndex++
                 setExercise(exerciseList[currentExerciseIndex])
             }
-        }
-
-        // Set up timer
-        timer = object : CountDownTimer(timeLeftInMillis, 1000) {
-            override fun onTick(millisUntilFinished: Long) {
-                timeLeftInMillis = millisUntilFinished
-                updateTimer()
-            }
-
-            override fun onFinish() {
-                timeLeftInMillis = 0
-                updateTimer()
+            else{
+                Toast.makeText(this, "No next exercise", Toast.LENGTH_SHORT).show()
             }
         }
-        timer.start()
 
-//         Footer navigation
+        startStopButton.setOnClickListener {
+            if (isTimerRunning) {
+                // Pause timer
+                isTimerRunning = false
+                countDownTimer?.cancel()
+                startStopButton.text = "Start"
+            } else {
+                // Start timer
+                isTimerRunning = true
+                startStopButton.text = "Pause"
+                countDownTimer = object : CountDownTimer(timeLeftInMillis, 1000) {
+                    override fun onTick(millisUntilFinished: Long) {
+                        timeLeftInMillis = millisUntilFinished
+                        updateTimer()
+                    }
+
+                    override fun onFinish() {
+                        isTimerRunning = false
+                        startStopButton.text = "Start"
+                        if (currentExerciseIndex < exerciseList.size - 1) {
+                            currentExerciseIndex++
+                            setExercise(exerciseList[currentExerciseIndex])
+                            timeLeftInMillis = 30000
+                            updateTimer()
+                        } else {
+                            // Workout finished
+                            timeLeftInMillis = 0
+                            updateTimer()
+                            Toast.makeText(applicationContext, "Workout finished", Toast.LENGTH_SHORT)
+                                .show()
+                        }
+                    }
+                }.start()
+            }
+        }
+
+        //Footer navigation
         val homeImageView: ImageView = findViewById(R.id.home)
         val workoutImageView: ImageView = findViewById(R.id.random_workouts)
         val nutritionImageView: ImageView = findViewById(R.id.nutrition)
@@ -96,8 +127,11 @@ class WorkoutActivity : AppCompatActivity() {
     private fun setExercise(exercise: Exercise) {
         exerciseImageView.setImageResource(exercise.imageResource)
         exerciseNameTextView.text = exercise.name
+        timeLeftInMillis = 30000 // 30 seconds
+        updateTimer()
     }
 
+    @SuppressLint("SetTextI18n")
     private fun updateTimer() {
         val seconds = timeLeftInMillis / 1000
         timerTextView.text = String.format("%02d", seconds / 60) + ":" + String.format("%02d", seconds % 60)
