@@ -48,8 +48,6 @@ class NutritionActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-
-
         // Footer navigation
         val homeImageView: ImageView = findViewById(R.id.home)
         val workoutImageView: ImageView = findViewById(R.id.random_workouts)
@@ -63,6 +61,11 @@ class NutritionActivity : AppCompatActivity() {
 
         nutritionImageView.setOnClickListener {
             Toast.makeText(this, "You are already on the Nutrition page", Toast.LENGTH_SHORT).show()
+        }
+
+        workoutImageView.setOnClickListener {
+            val intent = Intent(this, WorkoutActivity::class.java)
+            startActivity(intent)
         }
 
     }

@@ -89,6 +89,12 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        val workoutImageView: ImageView = findViewById(R.id.random_workouts)
+        workoutImageView.setOnClickListener {
+            val intent = Intent(this, WorkoutActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 }
 

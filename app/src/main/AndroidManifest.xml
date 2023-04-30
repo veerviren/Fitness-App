@@ -13,6 +13,11 @@
         android:theme="@style/Theme.FitnessApp"
         tools:targetApi="31">
         <activity
+            android:name=".WorkoutActivity"
+            android:exported="true" >
+
+        </activity>
+        <activity
             android:name=".NutritionActivityExpanded"
             android:exported="false" />
         <activity
