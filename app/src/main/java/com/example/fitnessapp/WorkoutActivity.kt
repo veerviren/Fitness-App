@@ -24,10 +24,13 @@ class WorkoutActivity : AppCompatActivity() {
 
     private var currentExerciseIndex = 0
     private val exerciseList = listOf(
-        Exercise("Push-up", R.drawable.excercise1),
-        Exercise("Squat", R.drawable.excercise2),
-        Exercise("Lunge", R.drawable.excercise3)
+        Exercise("Push-up", R.drawable.pushup),
+        Exercise("Squat", R.drawable.squat),
+        Exercise("Lunge", R.drawable.lunge),
+        Exercise("Sit-up", R.drawable.situp),
+        Exercise("Plank", R.drawable.plank),
     )
+
 
     private var timeLeftInMillis: Long = 60000 // 60 seconds
 
