@@ -2,17 +2,25 @@ package com.example.fitnessapp
 
 import android.annotation.SuppressLint
 import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.ImageView
 import android.widget.Toast
+import androidx.cardview.widget.CardView
 
 class ProfileActivity : AppCompatActivity() {
     @SuppressLint("ResourceAsColor")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_profile)
+
+        val githubCard: CardView = findViewById(R.id.github_card)
+        githubCard.setOnClickListener {
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/veerviren/Fitness-App"))
+            startActivity(intent)
+        }
 
         // Footer
         val homeImageView: ImageView = findViewById(R.id.home)

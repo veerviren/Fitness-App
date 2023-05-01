@@ -6,13 +6,6 @@
     android:background="@color/purple1"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <ImageView
-        android:id="@+id/drawer_icon"
-        android:src="@drawable/baseline_menu_24"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="8dp"/>
-
     <TextView
         android:id="@+id/title"
         android:text="My Fitness App"
