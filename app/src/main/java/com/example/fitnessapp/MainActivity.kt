@@ -18,27 +18,27 @@ class MainActivity : AppCompatActivity() {
 
         val exercises = listOf(
             Exercise(
-                "Age group 1",
-                R.drawable.excercise1,
-                "Description for Exercise 1",
+                "Age 5 - 12",
+                R.drawable.children,
+                "Calm your mind and body with this relaxing yoga routine. ",
                 listOf("Exercise A", "Exercise B", "Exercise C")
             ),
             Exercise(
-                "Age group 2",
-                R.drawable.excercise2,
-                "Description for Exercise 2",
+                "Age 13-20",
+                R.drawable.young,
+                "Regular exercise can help boost energy, maintain your independence, ",
                 listOf("Exercise X", "Exercise Y", "Exercise Z")
             ),
             Exercise(
-                "Age group 3",
-                R.drawable.excercise3,
-                "Description for Exercise 3",
+                "Age 21 - 50",
+                R.drawable.parents,
+                "Increase your flexibility and improve your balance with this set of exercises.",
                 listOf("Exercise M", "Exercise N", "Exercise O")
             ),
             Exercise(
-                "Age group 4",
-                R.drawable.excercise4,
-                "Description for Exercise 4",
+                "Age above 50",
+                R.drawable.excercise3,
+                "Medication to manage symptoms like tremors, stiffness, and slow movement.",
                 listOf("Exercise P", "Exercise Q", "Exercise R")
             )
         )
@@ -53,26 +53,27 @@ class MainActivity : AppCompatActivity() {
                 "Beginner's Full Body Workout",
                 "A full body workout for beginners",
                 4.5,
-                R.drawable.excercise1
+                R.drawable.fullbody
             ),
             PopularWorkoutPlan(
                 "Upper Body Strength Training",
                 "A strength training workout for the upper body",
                 4.2,
-                R.drawable.excercise2
+                R.drawable.upperbody
             ),
             PopularWorkoutPlan(
                 "Lower Body Tone Up",
                 "A toning workout for the lower body",
                 4.7,
-                R.drawable.excercise3
+                R.drawable.lowerbody
             ),
             PopularWorkoutPlan(
-                "Lower Body Tone Up",
-                "A toning workout for the lower body",
+                "Upcoming Workout Plan",
+                "stay tuned for more workout plans",
                 4.7,
-                R.drawable.excercise4
+                R.drawable.upcomming
             ),
+
         )
 
         val popularWorkoutPlanAdapter = PopularWorkoutPlanAdapter(popular_workout_plans)
