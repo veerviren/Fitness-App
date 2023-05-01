@@ -21,25 +21,29 @@ class MainActivity : AppCompatActivity() {
                 "Age 5 - 12",
                 R.drawable.children,
                 "Calm your mind and body with this relaxing yoga routine. ",
-                listOf("Exercise A", "Exercise B", "Exercise C")
+                listOf("Exercise A", "Exercise B", "Exercise C"),
+                "children"
             ),
             Exercise(
                 "Age 13-20",
                 R.drawable.young,
                 "Regular exercise can help boost energy, maintain your independence, ",
-                listOf("Exercise X", "Exercise Y", "Exercise Z")
+                listOf("Exercise X", "Exercise Y", "Exercise Z"),
+                "young"
             ),
             Exercise(
                 "Age 21 - 50",
                 R.drawable.parents,
                 "Increase your flexibility and improve your balance with this set of exercises.",
-                listOf("Exercise M", "Exercise N", "Exercise O")
+                listOf("Exercise M", "Exercise N", "Exercise O"),
+                "parents"
             ),
             Exercise(
                 "Age above 50",
                 R.drawable.excercise3,
                 "Medication to manage symptoms like tremors, stiffness, and slow movement.",
-                listOf("Exercise P", "Exercise Q", "Exercise R")
+                listOf("Exercise P", "Exercise Q", "Exercise R"),
+                "above 50"
             )
         )
 
