@@ -110,16 +110,16 @@ class NutritionActivity : AppCompatActivity() {
             val builder = AlertDialog.Builder(this)
             builder.setTitle("Select Diets")
             val items = listOf(
-                NutritionItem(R.drawable.apple, "Apples", "A popular fruit known for its crunchy texture and mildly sweet taste. Apples are a great source of fiber, vitamin C, and antioxidants."),
-                NutritionItem(R.drawable.banana, "Bananas", "A sweet and creamy fruit that is a great source of potassium and vitamin C. Bananas can help regulate blood sugar levels and aid digestion."),
-                NutritionItem(R.drawable.orange, "Oranges", "A juicy and tangy fruit that is packed with vitamin C and fiber. Oranges may help reduce the risk of heart disease and improve skin health."),
-                NutritionItem(R.drawable.grapes, "Grapes", "A sweet and juicy fruit that is rich in antioxidants and vitamin K. Grapes may help protect against certain types of cancer and improve brain function."),
-                NutritionItem(R.drawable.kiwi, "Kiwi", "A small and fuzzy fruit that is loaded with vitamin C and fiber. Kiwis may help improve immune function and lower inflammation."),
-                NutritionItem(R.drawable.mango, "Mango", "A sweet and tropical fruit that is rich in vitamins A and C. Mangoes may help lower cholesterol levels and improve digestion."),
-                NutritionItem(R.drawable.pineapple, "Pineapple", "A sweet and juicy fruit that is high in vitamin C and manganese. Pineapple may help reduce inflammation and aid in digestion."),
-                NutritionItem(R.drawable.watermelon, "Watermelon", "A refreshing and hydrating fruit that is packed with vitamins A and C. Watermelon may help lower blood pressure and reduce muscle soreness."),
-                NutritionItem(R.drawable.blueberries, "Blueberries", "A small and sweet fruit that is a great source of antioxidants and fiber. Blueberries may help improve memory and reduce inflammation."),
-                NutritionItem(R.drawable.strawberries, "Strawberries", "A juicy and sweet fruit that is high in vitamin C and antioxidants. Strawberries may help reduce the risk of heart disease and improve skin health.")
+                NutritionItem(R.drawable.vegan, "Vegan", "A vegan diet excludes all animal products, including meat, dairy, and eggs."),
+                NutritionItem(R.drawable.vegetarian, "Vegetarian", "A vegetarian diet excludes meat, poultry, and seafood."),
+                NutritionItem(R.drawable.pescatarian, "Pescatarian", "A pescatarian diet excludes meat and poultry, but includes fish and seafood."),
+                NutritionItem(R.drawable.ketogenic, "Ketogenic", "A ketogenic diet is high in fat, moderate in protein, and very low in carbs."),
+                NutritionItem(R.drawable.paleo, "Paleo", "A paleo diet excludes processed foods, grains, legumes, dairy, and refined sugar."),
+                NutritionItem(R.drawable.mediterranean, "Mediterranean", "A Mediterranean diet is rich in fruits, vegetables, whole grains, legumes, and olive oil."),
+                NutritionItem(R.drawable.whole30, "Whole30", "A Whole30 diet is a 30-day program that eliminates certain food groups, including sugar, dairy, grains, and legumes."),
+                NutritionItem(R.drawable.dash, "DASH", "A DASH diet is designed to help prevent or treat high blood pressure."),
+                NutritionItem(R.drawable.atkins, "Atkins", "An Atkins diet is split into 4 phases. It starts with a phase of drastically limiting carbs, and then gradually adds them back in."),
+                NutritionItem(R.drawable.weight_watchers, "Weight Watchers", "A Weight Watchers diet assigns points to foods based on their calorie, sugar, saturated fat, and protein content."),
             )
             val itemNames = items.map { it.name }
             builder.setItems(itemNames.toTypedArray()) { _, index ->
