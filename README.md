@@ -1,4 +1,4 @@
-# Fitness App
+# Fitness App [![Downloads](https://img.shields.io/github/downloads/veerviren/Fitness-App/total.svg)](https://github.com/veerviren/Fitness-App/releases)
 
 ## Description
 Fitness App is a mobile application that helps users to keep track of their workouts, set goals, and monitor their progress. With an intuitive interface and a wide range of features, it is an ideal tool for fitness enthusiasts of all levels.
