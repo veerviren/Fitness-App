@@ -29,10 +29,6 @@ Fitness App is a mobile application that helps users to keep track of their work
 3. Create a workout plan or choose from existing plans
 4. Track your workouts and monitor your progress
 5. Log your meals and track your nutrition
-6. Connect with friends and share your progress
 
 ## Contributing
-Contributions are welcome! Please read the [contributing guidelines](./CONTRIBUTING.md) for more information.
-
-## License
-This project is licensed under the [MIT License](./LICENSE).
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
