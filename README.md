@@ -11,9 +11,11 @@ Fitness App is a mobile application that helps users to keep track of their work
 
 ## Preview
 
-| Splash | Home | Create | View |
+| Splash | Home | Nutrition | FruitList |
 | ------ | -------- | ------ | ---- |
-| <img src="https://user-images.githubusercontent.com/77713965/234186356-c5bfe4e7-f18b-4e20-81f2-d15903159182.png" width="200"/> | <img src="https://user-images.githubusercontent.com/77713965/234186475-b60cc389-a7ca-4829-a7b4-60c5df470e67.png" width="200"/> | <img src="https://user-images.githubusercontent.com/77713965/234186870-30898d5f-5b22-4380-bddf-16fadeda8262.png" width="200"/> | <img src="https://user-images.githubusercontent.com/77713965/234186929-6c7a4f32-698b-4e43-8c59-a593ce6523c9.png" width="200"/> |
+| <img src="https://user-images.githubusercontent.com/77713965/235594759-f3857b8a-9055-458f-99ca-a81438fdcb4c.png" width="200"/> | <img src="https://user-images.githubusercontent.com/77713965/235594949-210a2687-8d0f-4831-9b4d-8c78e4dec33d.png" width="200"/> | <img src="https://user-images.githubusercontent.com/77713965/235595147-5fd0ad64-d9ba-47a4-b669-30b94dfd42c9.png" width="200"/> | <img src="https://user-images.githubusercontent.com/77713965/235595415-e48dcb34-0b1c-4961-8501-52e02ede1e1f.png" width="200"/> |
+| Discrition  | Workout1 | Workout2 | Profile |
+| <img src="https://user-images.githubusercontent.com/77713965/235595684-74f4a102-2195-4397-9c9f-a31382ef1dea.png" width="200"/> | <img src="https://user-images.githubusercontent.com/77713965/235595942-9f6cebc2-72ea-4f13-8dd4-45a82248934e.png" width="200"/> | <img src="https://user-images.githubusercontent.com/77713965/235596461-a5bccea6-f375-4d16-8386-797577a20cf3.png" width="200"/> | <img src="https://user-images.githubusercontent.com/77713965/235596557-1e570cab-10ab-4feb-9972-56037f1a59b8.png" width="200"/> |
 
 ## Installation
 1. Clone the repository
